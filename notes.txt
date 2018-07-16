@@ -1,0 +1,66 @@
+variable declarations in ts:
+
+var a: number;
+var b: boolean;
+var c: string;
+
+a = 10;
+b = true;
+c = 'Hello';
+
+var myArr: number[];
+myArr = [];
+myArr = [1, 2];
+myArr.push(3);
+a = myArr.pop();
+b = myArr.pop(); this will result in error because b is a boolean(see above)
+
+//tuple
+var myArr : [number, boolean];
+myArr = [1, true];
+myArr = [100, false];
+myArr = [1];  This will throw error because it need to have both boolean and number
+
+function add(a, b, c?){
+    //c is optional. We may pass 3 values or 2
+}
+
+function add(a, b, c=0, d=10){
+    //if we pass only 2 params only then also we won't get error since c will take 0 as value
+}
+
+function add(a,b): number{
+    //here number specifies the return type of the function
+}
+
+
+function greet(): string{
+    return "Good morning"
+}
+
+================================================
+
+"any" data type
+
+var a;
+or
+var a: any;
+
+a = 10;
+a = true;
+a = "A string";
+
+So any of the above types can be assigned to "a" at the same time.
+
+
+"union" data type
+var a : number | boolean;
+
+Thus 'a' can be either number or boolean
+
+a = 10;
+a = true;
+
+a = "hello"; This will throw an error
+
+================================================
