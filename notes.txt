@@ -64,3 +64,11 @@ a = true;
 a = "hello"; This will throw an error
 
 ================================================
+//The next command coverts test.ts to output-script.js
+tsc test.ts --out output-script.js
+
+//The compiler compiles the file, generates the output and then continuously monitors the file for changes
+tsc test.ts --out output-script.js --watch
+
+tsc -help
+
